@@ -11,37 +11,84 @@ const CartModal = () => {
      bg-white top-12 right-0 flex flex-col gap-6 z-20"
     >
       {!cartItems ? (
-        <div className=" "> Cart is Empty</div>
+        <div className="text-xl "> Cart is Empty</div>
       ) : (
-        <div className="flex gap-4">
-          <Image
-            src="https://images.pexels.com/photos/17827718/pexels-photo-17827718/free-photo-of-closeup-of-a-waterfall-against-blue-sky.jpeg"
-            alt=""
-            width={72}
-            height={96}
-            className="object-cover rounded-md"
-          />
-          <div className=" flex flex-col justify-between w-full">
-            {/* TOP  */}
-            <div className="">
-              {/* TITLE  */}
-              <div className="flex items-center justify-between gap-8">
-                <h3 className="font-semibold">Product Name</h3>
-                <div className="p-1 bg-green-50 rounded-sm">$49</div>
-              </div>
-              {/* DESC  */}
-              <div className=" text-sm text-gray-500">
-                awey awey
+        <>
+        <h2 className="">Shopping Cart</h2>
+          {/* LIST  */}
+          <div className="flex flex-col gap-8">
+            {/* ITEM  */}
+            <div className="flex gap-4">
+              <Image
+                src="https://images.pexels.com/photos/17827718/pexels-photo-17827718/free-photo-of-closeup-of-a-waterfall-against-blue-sky.jpeg"
+                alt=""
+                width={72}
+                height={96}
+                className="object-cover rounded-md"
+              />
+              <div className=" flex flex-col justify-between w-full">
+                {/* TOP  */}
+                <div className="">
+                  {/* TITLE  */}
+                  <div className="flex items-center justify-between gap-8">
+                    <h3 className="font-semibold">Product Name</h3>
+                    <div className="p-1 bg-green-50 rounded-sm">$49</div>
+                  </div>
+                  {/* DESC  */}
+                  <div className=" text-sm text-gray-500">awey awey</div>
+                </div>
+
+                {/* BOTTOM  */}
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Qty. 2</span>
+                  <span className="text-blue-500">Remove</span>
+                </div>
               </div>
             </div>
+            {/* ITEM2  */}
+            <div className="flex gap-4">
+              <Image
+                src="https://images.pexels.com/photos/17827718/pexels-photo-17827718/free-photo-of-closeup-of-a-waterfall-against-blue-sky.jpeg"
+                alt=""
+                width={72}
+                height={96}
+                className="object-cover rounded-md"
+              />
+              <div className=" flex flex-col justify-between w-full">
+                {/* TOP  */}
+                <div className="">
+                  {/* TITLE  */}
+                  <div className="flex items-center justify-between gap-8">
+                    <h3 className="font-semibold">Product Name</h3>
+                    <div className="p-1 bg-green-50 rounded-sm">$49</div>
+                  </div>
+                  {/* DESC  */}
+                  <div className=" text-sm text-gray-500">awey awey</div>
+                </div>
 
-            {/* BOTTOM  */}
-            <div className="">
-              <span>Qty. 2</span>
-              <span>Remove</span>
+                {/* BOTTOM  */}
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Qty. 2</span>
+                  <span className="text-blue-500">Remove</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          {/* BOTTOM */}
+          <div>
+            <div className=" flex items-center justify-between font-semibold">
+              <span>Total</span>
+              <span>$49</span>
+            </div>
+            <p className="text-gray-500 text-sm mt-2 mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div className="flex justify-between text-sm">
+              <button className="rounded-md py-3 px-4 ring-1 ring-gray-300"> View Cart</button>
+              <button className="rounded-md py-3 px-4 ring-1 bg-black text-white"> Checkout</button>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );
